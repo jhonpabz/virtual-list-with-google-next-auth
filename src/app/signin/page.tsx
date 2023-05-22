@@ -14,7 +14,9 @@ export default function SignIn() {
 
   const handleGoogleSignIn = (event: React.FormEvent<Element>) => {
     event.preventDefault();
-    signIn('google', { callbackUrl: 'http://localhost:3000/' });
+    signIn('google', {
+      callbackUrl: 'https://react-virtual-list-junior.netlify.app/',
+    });
   };
   return (
     <main className={styles.main}>
