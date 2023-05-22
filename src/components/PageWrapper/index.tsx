@@ -1,25 +1,18 @@
 'use client';
 
-import React, { FC, PropsWithChildren } from 'react';
+import React from 'react';
 import { Box } from '@mui/material';
-import { SxProps } from '@mui/system';
 
 interface PageWrapperProps {
-  children?: Element | undefined;
-  sx?: SxProps;
+  children: React.ReactNode;
 }
 
-type WrapperProps = PropsWithChildren & {
-  sx?: SxProps;
-};
-
-export const PageWrapper: FC = ({ children, sx }: WrapperProps) => {
+export const PageWrapper: React.FC<PageWrapperProps> = ({ children }) => {
   return (
     <Box
       sx={{
         display: 'flex',
         justifyContent: 'center',
-        ...sx,
       }}
     >
       {children}

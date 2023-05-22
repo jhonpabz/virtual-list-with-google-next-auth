@@ -3,17 +3,13 @@
 import { GoogleSignInButton, PageWrapper } from '@/components';
 import styles from '../page.module.css';
 import { useSession } from 'next-auth/react';
-import { redirect } from 'next/navigation';
+
 import { signIn } from 'next-auth/react';
-import { Box, Stack, Typography } from '@mui/material';
-import { Fragment } from 'react';
+import { Stack, Typography } from '@mui/material';
 
 export default function SignIn() {
   const { data: session } = useSession({
     required: false,
-    // onUnauthenticated() {
-    //   redirect('/signin?callbackUrl=/protected/client');
-    // },
   });
 
   const handleGoogleSignIn = (event: React.FormEvent<Element>) => {

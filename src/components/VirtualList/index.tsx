@@ -1,5 +1,5 @@
 'use client';
-import { FC, useState, useEffect, Fragment } from 'react';
+import React, { useState, useEffect, Fragment } from 'react';
 import { FixedSizeList, ListChildComponentProps } from 'react-window';
 import AutoSizer from 'react-virtualized-auto-sizer';
 
@@ -11,10 +11,8 @@ import { Typography } from '@mui/material';
 
 import axios from 'axios';
 
-export const VirtualList: FC = ({}) => {
-  const [load, setLoad] = useState();
-
-  const [data, setData] = useState(null);
+export const VirtualList: React.FC = ({}) => {
+  const [data, setData] = useState<any>([]);
   const [loading, setLoading] = useState(true);
 
   const getProducts = async () => {
