@@ -1,4 +1,4 @@
-export const pages = [
+export const routes = [
   {
     name: 'Home',
     path: '/',

@@ -1,1 +1,1 @@
-export * from './appBar';
+export * from './routes';
