@@ -2,20 +2,17 @@
 
 import React from 'react';
 import { Box } from '@mui/material';
+import styled from '@emotion/styled';
 
 interface PageWrapperProps {
   children: React.ReactNode;
 }
 
+const BoxWrapper = styled(Box)({
+  display: 'flex',
+  justifyContent: 'center',
+});
+
 export const PageWrapper: React.FC<PageWrapperProps> = ({ children }) => {
-  return (
-    <Box
-      sx={{
-        display: 'flex',
-        justifyContent: 'center',
-      }}
-    >
-      {children}
-    </Box>
-  );
+  return <BoxWrapper>{children}</BoxWrapper>;
 };
