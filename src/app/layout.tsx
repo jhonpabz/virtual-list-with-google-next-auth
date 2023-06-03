@@ -1,4 +1,4 @@
-import { Provider, ResponsiveAppBar } from '@/components';
+import { NavBar, Provider } from '@/components';
 import './globals.css';
 import { Inter } from 'next/font/google';
 
@@ -18,7 +18,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Provider>
-          <ResponsiveAppBar />
+          <NavBar />
           {children}
         </Provider>
       </body>

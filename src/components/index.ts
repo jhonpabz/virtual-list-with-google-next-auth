@@ -1,4 +1,4 @@
-export * from './ResponsiveAppBar';
+export * from './NavBar';
 export * from './VirtualList';
 export * from './Provider';
 export * from './Buttons/GoogleSignInButton';
